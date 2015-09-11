@@ -13,6 +13,7 @@ describe BonusDrink do
   specify { expect(BonusDrink.total_count_for(9)).to eq 13 }
   specify { expect(BonusDrink.total_count_for(10)).to eq 14 }
   specify { expect(BonusDrink.total_count_for(11)).to eq 16 }
+  specify { expect(BonusDrink.total_count_for(100)).to eq 149 }
 
   context :invalid do
     specify { expect { BonusDrink.total_count_for(-1) }.to raise_error(ArgumentError) }
